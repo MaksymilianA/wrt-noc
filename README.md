@@ -26,9 +26,9 @@ RSSI monitoring is limited to routers with Broadcom chips.
 2. Clone this repository to the virtual machine.
 3. In the cloned repository, configure the **docker-compose.yml** file by setting the following environment variables:
 
-``DOCKER_INFLUXDB_INIT_USERNAME
-DOCKER_INFLUXDB_INIT_PASSWORD
-DOCKER_INFLUXDB_INIT_ADMIN_TOKEN``
+``DOCKER_INFLUXDB_INIT_USERNAME``
+``DOCKER_INFLUXDB_INIT_PASSWORD``
+``DOCKER_INFLUXDB_INIT_ADMIN_TOKEN``
 
 4. Also in the docker-compose.yml file, configure the external IP of the virtual machine and set the the same '**url**' parameter in "**datasources/influxdb2.yml**"
 5. Run **docker-compose up -d** to start the InfluxDB and Grafana servers.
