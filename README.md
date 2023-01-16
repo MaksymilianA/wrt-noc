@@ -26,9 +26,9 @@ RSSI monitoring is limited to routers with Broadcom chips.
 2. Clone this repository to the virtual machine.
 3. In the cloned repository, configure the **docker-compose.yml** file by setting the following environment variables:
 
-DOCKER_INFLUXDB_INIT_USERNAME
+``DOCKER_INFLUXDB_INIT_USERNAME
 DOCKER_INFLUXDB_INIT_PASSWORD
-DOCKER_INFLUXDB_INIT_ADMIN_TOKEN
+DOCKER_INFLUXDB_INIT_ADMIN_TOKEN``
 
 4. Also in the docker-compose.yml file, configure the external IP of the virtual machine and set the the same '**url**' parameter in "**datasources/influxdb2.yml**"
 5. Run **docker-compose up -d** to start the InfluxDB and Grafana servers.
@@ -42,13 +42,22 @@ DOCKER_INFLUXDB_INIT_ADMIN_TOKEN
 6. Customize the 'inputs.exec' where 'bash **/path/to/extraInfo.sh**' to define the proper path to extraInfo.sh.
 7. Start Telegraf on the router
 
-telegraf --config telegraf.config
+``telegraf --config telegraf.config``
 
 ## Security
-Default passwords should be changed.
-SSL keys are located in the ssl directory.
+For optimal security, it is highly recommended to change the default passwords and SSL keys as soon as the project is installed. The default passwords and keys are located in the "ssl" directory and can be easily changed by following these steps:
+
+1. Locate the "ssl" directory in the project's file structure.
+2. Replace the default password and keys with new, strong and unique passwords and keys.
+3. Make sure to use a strong password generator to create your new password, you can use online tool or a password manager to generate them.
+4. Store the new passwords and keys in a secure location, such as a password manager, and do not share them with anyone.
+
+By taking these simple steps, you can greatly enhance the security of your project and protect it from potential vulnerabilities. It is also important to note that you should change the passwords and keys regularly to ensure that they remain secure.
 
 ## License
 This project is licensed under the MIT License.
 
 Author: Maksymilian Arciemowicz
+
+## RSSI Dashboard
+![Screenshot](screenshots/clients_Dashboard.png)
