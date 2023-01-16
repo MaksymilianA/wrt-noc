@@ -1,0 +1,17 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB
+    type: influxdb
+    url: https://URL:8086/
+    isDefault: true
+    basicAuth: false
+    editable: true
+    jsonData:
+      version: Flux
+      tlsSkipVerify: true
+      timeInterval: '1m'
+      defaultBucket: "labBucket"
+      organization: 'myorg'
+    secureJsonData:
+      token: "SecretTokenToChangeHereAndTelegrafCnf"
