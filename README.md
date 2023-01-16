@@ -16,8 +16,7 @@ This project provides a way to collect router metrics and visualize them using *
 ## Tested Routers
 **Asus RT-AX56U V1** (AsusWRT Merlin firmware)<br />
 **Linksys WRT3200ACM** (DD-WRT firmware)<br />
-
-<br /> Note: RSSI monitoring may not work on Linksys WRT3200ACM router due to the Marvell chip.<br /> The best choice on the market is to use Wifi6 ASUS routers with Broadcom chips.
+Note: RSSI monitoring may not work on Linksys WRT3200ACM router due to the Marvell chip.<br /> The best choice on the market is to use Wifi6 ASUS routers with Broadcom chips.<br />
 
 ## Limitations
 RSSI monitoring is limited to routers with Broadcom chips.
